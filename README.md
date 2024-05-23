@@ -1,6 +1,6 @@
 # Lab Exercise
 
-# Lecture 1
+## Lecture 1
 
 ### Question 1
 
