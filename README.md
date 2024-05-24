@@ -1,4 +1,4 @@
-# Lab 2 – Pizza Class.
+# Lab 2 – Pizza Class
 
 We will continue working on python. Using a Google Colab notebook write
 the python statement to define a Pizza class. The test harness is
@@ -6,23 +6,23 @@ provided to you by the instructor as well as the resulting output given.
 
 **Maximum points for this exercise are 18 marks.**
 
-## Topics covered:
+## Topics covered
 
--   List
+- List
 
--   Dictionary
+- Dictionary
 
--   Class
+- Class
 
-    -   Constructor
+  - Constructor
 
-    -   Property
+  - Property
 
-    -   Methods
+  - Methods
 
--   Exception
+- Exception
 
-## How to do this assignment.
+## How to do this assignment
 
 From the test harness and the given output, try to deduce the definition
 of the Pizza class. Code this class in a Colab notebook and copy the
@@ -31,19 +31,19 @@ output matches EXACTLY with the output on the following page.
 
 You must use python f-strings for your output.
 
-## Deductions.
+## Deductions
 
 Do not modify the test harness.
 
 Do not add frivolous members or un-necessary logic.
 
-## Documentation.
+## Documentation
 
 Because the code is so simple no code documentation is required, however
 you must put your name and the current date somewhere at the top of your
 code.
 
-## How to submit this assignment.
+## How to submit this assignment
 
 Make the notebook shareable and submit the link to the course assessment
 folder.
@@ -63,13 +63,13 @@ implementation is only 30 lines of code.
 Remember that class members do not have a "self" prefix and are accessed
 with the class name and the dot operator.
 
-1.  Valid sizes for pizza contained in a collection at the class
+1. Valid sizes for pizza contained in a collection at the class
     level.  
     You get to decode on the type of collection to store the sizes
     below.  
     Valid sizes are small, medium, large and x-large.
 
-2.  Another class level collection having the prices for each valid
+2. Another class level collection having the prices for each valid
     size.  
     You get to decide on the type of collection to store the prices
     below.  
@@ -80,13 +80,13 @@ with the class name and the dot operator.
 
 Instance methods have an implicit first argument "self".
 
-1.  A constructor that takes a default size of medium and topping of a
+1. A constructor that takes a default size of medium and topping of a
     list of cheese that does the following:
 
-    1.  Set the first argument size to the instance attribute size. Size
+    1. Set the first argument size to the instance attribute size. Size
         must be verified. This can be done by setting the size property.
 
-    2.  Creates an instance attribute a list with the second argument.
+    2. Creates an instance attribute a list with the second argument.
         If the second argument is missing, a single cheese topping is
         inserted in the list.
 
@@ -94,10 +94,10 @@ Instance methods have an implicit first argument "self".
 
 Instance methods have an implicit first argument "self".
 
-1.  A method that takes an argument of type list of strings. It adds
+1. A method that takes an argument of type list of strings. It adds
     topping to the list of pizza toppings.
 
-2.  Implement the \_\_str\_\_() method to return a formatted string.
+2. Implement the \_\_str\_\_() method to return a formatted string.
     Examine the output from the test harness for clues on how to
     implement this method.
 
@@ -105,17 +105,17 @@ Instance methods have an implicit first argument "self".
 
 Instance properties have an implicit first argument "self".
 
-1.  A property that returns the price of the pizza.
+1. A property that returns the price of the pizza.
 
-    1.  Price is based on the size as well as the number of toppings.  
+    1. Price is based on the size as well as the number of toppings.  
         See spec#2 for cost based on size. Each topping cost an
         additional $0.50 each.
 
-2.  A property that returns the size of the pizza.
+2. A property that returns the size of the pizza.
 
-3.  A property that sets the size of the pizza.
+3. A property that sets the size of the pizza.
 
-    1.  Size must be verified. A ValueError exception is raised if the
+    1. Size must be verified. A ValueError exception is raised if the
         size is invalid.
 
 ### Instance Attributes
@@ -124,16 +124,16 @@ All of the following Instance attributes are initialized in the
 constructor from the values of the argument. Notice the \_\_ prefix to
 make is private.
 
-1.  \_\_size is a str that stores the size of this object. This is
+1. \_\_size is a str that stores the size of this object. This is
     initialized in the constructor. It is mutated by the property in #8.
     It is returned in #7. It is used in #6 to calculate the cost of the
     pizza.
 
-2.  \_\_toppings a list of string that represents the toppings for this
+2. \_\_toppings a list of string that represents the toppings for this
     object. This is initialized in the constructor. It is mutated in the
     add() method and is used in #6 to calculate the cost of the pizza.
 
-# The test harness.
+# The test harness
 
 You may not change the test harness.
 
