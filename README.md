@@ -1,90 +1,204 @@
-# Lab Exercise
+# Lab 2 – Pizza Class.
 
-## Lecture 1
+We will continue working on python. Using a Google Colab notebook write
+the python statement to define a Pizza class. The test harness is
+provided to you by the instructor as well as the resulting output given.
 
-### Question 1
+**Maximum points for this exercise are 18 marks.**
 
-Create a one-line expression that achieve the same output as the below with the square bracket notation.
+## Topics covered:
+
+-   List
+
+-   Dictionary
+
+-   Class
+
+    -   Constructor
+
+    -   Property
+
+    -   Methods
+
+-   Exception
+
+## How to do this assignment.
+
+From the test harness and the given output, try to deduce the definition
+of the Pizza class. Code this class in a Colab notebook and copy the
+test harness to a cell below. Execute the notebook and ensure that the
+output matches EXACTLY with the output on the following page.
+
+You must use python f-strings for your output.
+
+## Deductions.
+
+Do not modify the test harness.
+
+Do not add frivolous members or un-necessary logic.
+
+## Documentation.
+
+Because the code is so simple no code documentation is required, however
+you must put your name and the current date somewhere at the top of your
+code.
+
+## How to submit this assignment.
+
+Make the notebook shareable and submit the link to the course assessment
+folder.
+
+See the folder documentation for due date.
+
+See the course documentation for policy on deadlines.
+
+# Specifications for the Pizza class
+
+The implementation of this class is almost simplistic! All of the
+methods (except two) are only single code statements. My class
+implementation is only 30 lines of code.
+
+### Class attributes
+
+Remember that class members do not have a "self" prefix and are accessed
+with the class name and the dot operator.
+
+1.  Valid sizes for pizza contained in a collection at the class
+    level.  
+    You get to decode on the type of collection to store the sizes
+    below.  
+    Valid sizes are small, medium, large and x-large.
+
+2.  Another class level collection having the prices for each valid
+    size.  
+    You get to decide on the type of collection to store the prices
+    below.  
+    Prices are small: $6.49, medium: $8.49, large: $10.49, x-large:
+    $13.49.
+
+### Constructor
+
+Instance methods have an implicit first argument "self".
+
+1.  A constructor that takes a default size of medium and topping of a
+    list of cheese that does the following:
+
+    1.  Set the first argument size to the instance attribute size. Size
+        must be verified. This can be done by setting the size property.
+
+    2.  Creates an instance attribute a list with the second argument.
+        If the second argument is missing, a single cheese topping is
+        inserted in the list.
+
+### Instance methods
+
+Instance methods have an implicit first argument "self".
+
+1.  A method that takes an argument of type list of strings. It adds
+    topping to the list of pizza toppings.
+
+2.  Implement the \_\_str\_\_() method to return a formatted string.
+    Examine the output from the test harness for clues on how to
+    implement this method.
+
+### Instance Properties
+
+Instance properties have an implicit first argument "self".
+
+1.  A property that returns the price of the pizza.
+
+    1.  Price is based on the size as well as the number of toppings.  
+        See spec#2 for cost based on size. Each topping cost an
+        additional $0.50 each.
+
+2.  A property that returns the size of the pizza.
+
+3.  A property that sets the size of the pizza.
+
+    1.  Size must be verified. A ValueError exception is raised if the
+        size is invalid.
+
+### Instance Attributes
+
+All of the following Instance attributes are initialized in the
+constructor from the values of the argument. Notice the \_\_ prefix to
+make is private.
+
+1.  \_\_size is a str that stores the size of this object. This is
+    initialized in the constructor. It is mutated by the property in #8.
+    It is returned in #7. It is used in #6 to calculate the cost of the
+    pizza.
+
+2.  \_\_toppings a list of string that represents the toppings for this
+    object. This is initialized in the constructor. It is mutated in the
+    add() method and is used in #6 to calculate the cost of the pizza.
+
+# The test harness.
+
+You may not change the test harness.
 
 ``` python
-NBA = dict(
-    OklahomaCity="Thunder",
-    Dallas="Mavericks",
-    Boston="Celtics",
-    NewYork="Knicks",
-    Denver="Nuggets",
-)
+print(f'Creating a default pizza')
+p = Pizza()
+print(p)
 
-retrieve = NBA.get("Toronto", False)
-print(retrieve)
+
+toppings = 'cheese olive'.split()
+print(f'\nAdding topping: {toppings}')
+p.add(toppings=toppings)
+print(p)
+
+
+print(f'\nCreating a new pizza')
+p = Pizza('large', 'cheese pepper'.split())
+print(p)
+
+
+toppings = ['pineapple', 'mushroom']
+print(f'\nAdding topping: {toppings}')
+p.add(toppings)
+print(p)
+
+
+size = 'x-large'
+p.size = size
+print(f'\nChanging order size to {size}')
+print(p)
+
+
+size = 'gigantic'
+print(f'\nChanging order size to {size}')
+try:
+  p.size = size
+except ValueError as err:
+  print(err) 
 ```
 
-### Question 2
+# The resulting output
 
-Given two numbers, a and b, write a function called compare_numbers that returns a string indicating the following:
-
-- If a is greater than b, return "a is greater"
-- If b is greater than a, return "b is greater"
-- If both numbers are equal, return "a and b are equal"
-
-Use the ternary operator to implement the function.
-
-``` python
-def compare_numbers(a, b):
-    pass
-```
-
-### Question 3
-
-Examine following JS code snippet and re-create the logic
-using Python. Implement the logic as a function that accepts secret_word
-as a positional parameter and max_attempt as keyword parameter.
-
-``` js
-let secret_word = "javascript";
-let max_attempt = 5;
-do {
-    userInput = prompt("Enter the secret word: ");
-    max_attempt -= 1;
-    console.log(max_attempt)
-} while (secret_word != userInput && max_attempt > 0);
+Creating a default pizza
 
 ```
+Creating a default pizza
+medium pizza with ['cheese'] for $8.99
 
-### Question 4
 
-Based on the following function definition, identify which of the following parameters are positional-only, keyword-only and/or may be positionally or by keyword.
+Adding topping: ['cheese', 'olive']
+medium pizza with ['cheese', 'cheese', 'olive'] for $9.99
 
-``` python
-def processor(value_1, value_2, /, value_3, value_4=False, *, value_5, value_6):
-    text = (value_1 + value_2).upper()
-    if value_3:
-        text += "!"
-    if value_4:
-        text = list(text)
-        text.extend((value_5, value_6))
-    return text
+
+Creating a new pizza
+large pizza with ['cheese', 'pepper'] for $11.49
+
+
+Adding topping: ['pineapple', 'mushroom']
+large pizza with ['cheese', 'pepper', 'pineapple', 'mushroom'] for $12.49
+
+
+Changing order size to x-large
+x-large pizza with ['cheese', 'pepper', 'pineapple', 'mushroom'] for $15.49
+
+
+Changing order size to gigantic
+ERROR: gigantic is not a valid size for a pizza 
 ```
-
-## Lecture 2
-
-### Question 1
-
-Create a Triangle Class based on the following specifications:
-
-- Two arguments are accepted: 1) List of side lengths; 2) List of angles.
-    - Validate 3 side length values and 3 angle values are    provided.
-    - All values in the list must be non-zero Int or Float.
-    - The angles must add up to 180°
-    - Hint: Use Property or Descriptor-based attributes.
-- Create an Instance method to calculate the perimeter of the triangle.
-- Create a Static method to calculate the hypothenuse when supplied with two sides.
-- Create a Dunder method to determine if one triangle instance is larger than another based it perimeter.
-- Create a Dunder method to generate an iterator based on the side lengths of a specific instance.
-
-### Question 2
-
-Based on the Triangle Class (above), create an Isosceles Triangle Subclass (e.g., two side and two angles are equal). Override and extend any inherited methods as needed.
-
-- Create an Instance Method to determine the height of an isosceles
-    triangle.
