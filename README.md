@@ -2,7 +2,7 @@
 
 ## Pizza Class
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ttran375/comp216-lab2/blob/main/pizza.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ttran375/comp216-lab3/blob/main/pizza.ipynb)
 
 We will continue working on python. Using a Google Colab notebook write
 the python statement to define a Pizza class. The test harness is
