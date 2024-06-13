@@ -1,8 +1,6 @@
-# Lab 3
+# Pizza Class
 
-## Pizza Class
-
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ttran375/comp216-assignment2/blob/main/pizza.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ttran375/comp216-assignment2/blob/main/src/pizza.ipynb)
 
 We will continue working on python. Using a Google Colab notebook write
 the python statement to define a Pizza class. The test harness is
@@ -10,7 +8,7 @@ provided to you by the instructor as well as the resulting output given.
 
 **Maximum points for this exercise are 18 marks.**
 
-### Topics covered
+## Topics covered
 
 - List
 
@@ -26,7 +24,7 @@ provided to you by the instructor as well as the resulting output given.
 
 - Exception
 
-### How to do this assignment
+## How to do this assignment
 
 From the test harness and the given output, try to deduce the definition
 of the Pizza class. Code this class in a Colab notebook and copy the
@@ -35,19 +33,19 @@ output matches EXACTLY with the output on the following page.
 
 You must use python f-strings for your output.
 
-### Deductions
+## Deductions
 
 Do not modify the test harness.
 
 Do not add frivolous members or un-necessary logic.
 
-### Documentation
+## Documentation
 
 Because the code is so simple no code documentation is required, however
 you must put your name and the current date somewhere at the top of your
 code.
 
-### How to submit this assignment
+## How to submit this assignment
 
 Make the notebook shareable and submit the link to the course assessment
 folder.
@@ -56,13 +54,13 @@ See the folder documentation for due date.
 
 See the course documentation for policy on deadlines.
 
-### Specifications for the Pizza class
+## Specifications for the Pizza class
 
 The implementation of this class is almost simplistic! All of the
 methods (except two) are only single code statements. My class
 implementation is only 30 lines of code.
 
-#### Class attributes
+### Class attributes
 
 Remember that class members do not have a "self" prefix and are accessed
 with the class name and the dot operator.
@@ -80,7 +78,7 @@ with the class name and the dot operator.
     Prices are small: $6.49, medium: $8.49, large: $10.49, x-large:
     $13.49.
 
-#### Constructor
+### Constructor
 
 Instance methods have an implicit first argument "self".
 
@@ -94,7 +92,7 @@ Instance methods have an implicit first argument "self".
         If the second argument is missing, a single cheese topping is
         inserted in the list.
 
-#### Instance methods
+### Instance methods
 
 Instance methods have an implicit first argument "self".
 
@@ -105,7 +103,7 @@ Instance methods have an implicit first argument "self".
     Examine the output from the test harness for clues on how to
     implement this method.
 
-#### Instance Properties
+### Instance Properties
 
 Instance properties have an implicit first argument "self".
 
@@ -122,7 +120,7 @@ Instance properties have an implicit first argument "self".
     1. Size must be verified. A ValueError exception is raised if the
         size is invalid.
 
-#### Instance Attributes
+### Instance Attributes
 
 All of the following Instance attributes are initialized in the
 constructor from the values of the argument. Notice the \_\_ prefix to
@@ -137,7 +135,7 @@ make is private.
     object. This is initialized in the constructor. It is mutated in the
     add() method and is used in #6 to calculate the cost of the pizza.
 
-### The test harness
+## The test harness
 
 You may not change the test harness.
 
@@ -178,7 +176,7 @@ except ValueError as err:
   print(err) 
 ```
 
-### The resulting output
+## The resulting output
 
 Creating a default pizza
 
